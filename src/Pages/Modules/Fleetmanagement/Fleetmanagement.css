@@ -1,0 +1,121 @@
+.dashboard-container {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background-color: #f4f6f8;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #002b5c;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+.sidebar .active {
+  font-weight: bold;
+  color: #00bfff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 26px;
+  color: #003366;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.header-actions input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.header-actions button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.truck-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.truck-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.truck-card h3 {
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.truck-card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.status {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.truck-card.active .status {
+  color: green;
+}
+
+.truck-card.maintenance .status {
+  color: orange;
+}
+
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 6px 12px;
+  font-size: 13px;
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

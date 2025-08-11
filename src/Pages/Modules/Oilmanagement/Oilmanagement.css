@@ -1,0 +1,71 @@
+.oil-management-container {
+  margin: 40px auto;
+  max-width: 900px;
+  background: #f8f9fa;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.04);
+}
+.operations-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.operations-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 22px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #f0f6fc;
+}
+.operations-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.operations-table th,
+.operations-table td {
+  padding: 10px 12px;
+  text-align: left;
+}
+.operations-table tbody tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+.type-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 9px;
+  font-size: 0.95em;
+  color: #fff;
+}
+.type-tankerfill {
+  background: #3784fa;
+}
+.type-truckfill {
+  background: #3dd86f;
+}
+.status-completed {
+  background: #e9faf0;
+  color: #18a05b;
+  border-radius: 7px;
+  padding: 4px 12px;
+  font-weight: 600;
+  font-size: 0.93em;
+  display: inline-block;
+}
+.status-pending {
+  background: #fff8e6;
+  color: #d8b348;
+  border-radius: 7px;
+  padding: 4px 12px;
+  font-weight: 600;
+  font-size: 0.93em;
+  display: inline-block;
+}

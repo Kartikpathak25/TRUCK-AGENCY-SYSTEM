@@ -1,0 +1,61 @@
+/* src/Dashboard/AdminDashboard/AdminDashboard.css */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.status, .operations {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.status ul, .operations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.status li, .operations li {
+  margin-bottom: 8px;
+}
