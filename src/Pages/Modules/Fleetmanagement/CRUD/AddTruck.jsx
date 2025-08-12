@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AddTruck.css';
 
-const AddTruckModal = ({ onClose, onAdd }) => {
+const AddTruck = ({ onClose, onAdd }) => {
   const [formData, setFormData] = useState({
     id: '',
     model: '',
@@ -34,7 +34,7 @@ const AddTruckModal = ({ onClose, onAdd }) => {
         <input name="location" placeholder="Location" value={formData.location} onChange={handleChange} />
         <select name="status" value={formData.status} onChange={handleChange}>
           <option value="active">Active</option>
-          <option value="maintenance">Maintenance</option>
+          <option value="maintenance">Inactive</option>
         </select>
         <div className="modal-actions">
           <button onClick={onClose}>Cancel</button>
@@ -45,4 +45,4 @@ const AddTruckModal = ({ onClose, onAdd }) => {
   );
 };
 
-export default AddTruckModal;
+export default AddTruck;

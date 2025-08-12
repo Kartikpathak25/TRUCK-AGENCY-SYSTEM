@@ -1,25 +1,58 @@
-// src/Component/Layouts/SideBar/Sidebar.jsx
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './Sidebar.css';
+import {
+  FaTachometerAlt,     // Dashboard
+  FaTruck,             // Fleet Management
+  FaOilCan,            // Oil Management
+  FaUsers,             // User Management
+  FaCity,              // City Operation (custom substitute)
+  FaSignOutAlt         // Logout
+} from 'react-icons/fa';
 
+import styles from './Sidebar.css'; 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h2>🛢️ OilFlow Admin</h2>
-      <ul>
-        <li><NavLink to="/admin-dashboard">Dashboard</NavLink></li>
-        <li><NavLink to="/fleet">Fleet Management</NavLink></li>
-        <li><NavLink to="/oil">Oil Management</NavLink></li>
-        <li><NavLink to="/city">City Operations</NavLink></li>
-        <li><NavLink to="/users">User Management</NavLink></li>
-        <li><NavLink to="/analytics">Analytics</NavLink></li>
-        <li><NavLink to="/settings">Settings</NavLink></li>
-        <li><NavLink to="/login">Logout</NavLink></li>
+      <h2 className={styles.title}>Admin Panel</h2>
+      <ul className={styles.navList}>
+        <li>
+          <a href="/admin-dashboard" className={styles.navItem}>
+            <FaTachometerAlt className={styles.icon} />
+             Dashboard 
+          </a>
+        </li>
+        <li>
+          <a href="/fleet" className={styles.navItem}>
+            <FaTruck className={styles.icon} />
+            Fleet Management
+          </a>
+        </li>
+        <li>
+          <a href="/oil" className={styles.navItem}>
+            <FaOilCan className={styles.icon} />
+            Oil Management
+          </a>
+        </li>
+        <li>
+          <a href="/users" className={styles.navItem}>
+            <FaUsers className={styles.icon} />
+            User Management
+          </a>
+        </li>
+        <li>
+          <a href="/city" className={styles.navItem}>
+            <FaCity className={styles.icon} />
+            City Operation
+          </a>
+        </li>
+        <li>
+          <a href="/login" className={styles.navItem}>
+            <FaSignOutAlt className={styles.icon} />
+            Logout
+          </a>
+        </li>
       </ul>
     </div>
   );
 };
 
 export default Sidebar;
-

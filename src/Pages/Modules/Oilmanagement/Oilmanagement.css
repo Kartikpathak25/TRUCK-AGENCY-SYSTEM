@@ -1,71 +1,81 @@
-.oil-management-container {
-  margin: 40px auto;
-  max-width: 900px;
-  background: #f8f9fa;
-  padding: 32px;
-  border-radius: 20px;
-  box-shadow: 0 2px 18px rgba(0,0,0,0.04);
+/* src/Dashboard/OilManagement/OilManagement.css */
+.oil-dashboard {
+  display: flex;
+  height: 100vh;
 }
-.operations-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 32px 24px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+
+.oil-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #f9f9f9;
+  overflow-y: auto;
 }
-.operations-header {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 18px;
+
+.oil-content h1 {
+  margin-bottom: 20px;
 }
-.search-input {
-  width: 100%;
-  padding: 10px 14px;
-  margin-bottom: 22px;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #e2e8f0;
-  background: #f0f6fc;
+
+.oil-actions {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
 }
-.operations-table {
+
+.fill-btn {
+  padding: 10px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.fill-btn:hover {
+  background-color: #218838;
+}
+
+.oil-table {
   width: 100%;
   border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.operations-table th,
-.operations-table td {
-  padding: 10px 12px;
+
+.oil-table th, .oil-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
   text-align: left;
 }
-.operations-table tbody tr:nth-child(even) {
-  background-color: #f3f4f6;
+
+.oil-table th {
+  background-color: #f0f0f0;
 }
-.type-badge {
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: 9px;
-  font-size: 0.95em;
-  color: #fff;
+
+.completed {
+  color: green;
+  font-weight: bold;
 }
-.type-tankerfill {
-  background: #3784fa;
+
+.pending {
+  color: orange;
+  font-weight: bold;
 }
-.type-truckfill {
-  background: #3dd86f;
+
+.edit-btn, .delete-btn {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.status-completed {
-  background: #e9faf0;
-  color: #18a05b;
-  border-radius: 7px;
-  padding: 4px 12px;
-  font-weight: 600;
-  font-size: 0.93em;
-  display: inline-block;
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
 }
-.status-pending {
-  background: #fff8e6;
-  color: #d8b348;
-  border-radius: 7px;
-  padding: 4px 12px;
-  font-weight: 600;
-  font-size: 0.93em;
-  display: inline-block;
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
 }
