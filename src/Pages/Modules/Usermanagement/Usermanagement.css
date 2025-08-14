@@ -1,165 +1,118 @@
-/* .user-mgmt-main {
-  background: #f9fafb;
-  min-height: 100vh;
-  padding: 40px 50px;
+/* Usermanagement.css */
+
+.user-management-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
 }
 
-/* Top */
-.user-mgmt-top {
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.user-mgmt-top h2 {
-  font-size: 2rem;
-  font-weight: bold;
   margin-bottom: 20px;
 }
 
+.header h2 {
+  font-size: 24px;
+  color: #333;
+}
+
 .add-user-btn {
-  background: #2563eb;
+  background-color: #0078d4;
   color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
   border: none;
-  font-size: 1rem;
-  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .add-user-btn:hover {
-  background: #1d4ed8;
+  background-color: #005fa3;
 }
 
-/* Filter */
-.user-mgmt-filter {
-  display: flex;
-  gap: 18px;
-  margin-bottom: 28px;
+.filters {
+  margin-bottom: 20px;
 }
 
-.user-mgmt-filter input {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  width: 320px;
-  font-size: 1rem;
-  outline: none;
+.filters input {
+  width: 300px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
-.user-mgmt-filter select {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-size: 1rem;
-  outline: none;
-}
-
-/* Table styles */
-.user-mgmt-table-wrap {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px #e5e7eb;
-  overflow-x: auto;
-}
-
-.user-mgmt-table {
+.user-table {
   width: 100%;
   border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.user-mgmt-table th, .user-mgmt-table td {
-  padding: 16px 12px;
+.user-table th,
+.user-table td {
+  padding: 12px 16px;
   text-align: left;
-  font-size: 1rem;
+  border-bottom: 1px solid #eee;
 }
 
-.user-mgmt-table thead {
-  background: #f3f4f6;
-}
-
-.user-mgmt-table tbody tr {
-  border-bottom: 1px solid #e5e7eb;
-  transition: background 0.17s;
-}
-
-.user-mgmt-table tbody tr:hover {
-  background: #f1f5f9;
+.user-table th {
+  background-color: #f0f2f5;
+  color: #555;
+  font-weight: 600;
 }
 
 .user-info {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
-.initials {
-  background: #e0e7ff;
-  color: #2563eb;
+.avatar {
+  background-color: #0078d4;
+  color: white;
   font-weight: bold;
   border-radius: 50%;
-  width: 40px; height: 40px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
 }
 
-.name { font-weight: 500; font-size: 1rem; margin-bottom: 2px; }
-.email { color: #6b7280; font-size: 0.95rem; }
-
-.role-pill {
-  padding: 6px 16px; border-radius: 12px; font-size: 0.95rem; font-weight: 500; display: inline-block;
+.email {
+  font-size: 13px;
+  color: #666;
 }
-.role-admin { background: #ede9fe; color: #a21caf; }
-.role-tanker { background: #e0e7ff; color: #2563eb; }
 
-.status-pill {
-  padding: 6px 16px; border-radius: 12px; font-weight: 500; font-size: 0.95rem; display: inline-block;
-}
-.status-active { background: #dcfce7; color: #16a34a; }
-.status-inactive { background: #fee2e2; color: #dc2626; }
-
-.actions { display: flex; gap: 12px; }
-.edit-btn, .delete-btn {
+.edit,
+.delete {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  font-size: 16px;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
 }
 
-@media (max-width: 800px) {
-  .user-mgmt-main { padding: 20px 6px; }
-  .user-mgmt-filter input,
-  .user-mgmt-filter select { width: 100%; min-width: 100px; }
-} */
-
-/* Main content container when sidebar exists */
-.fleet-services-main {
-  background: #f9fafb;
-  min-height: 100vh;
-  padding: 40px 50px;
-  margin-left: 240px; /* Push content right to make space for sidebar */
-  transition: margin-left 0.3s ease;
+.edit:hover {
+  color: #0078d4;
+  transform: scale(1.1);
 }
 
-/* If sidebar is collapsible/hidden */
-.sidebar-collapsed .fleet-services-main {
-  margin-left: 80px; /* If minimized sidebar */
-}
-
-/* Adjust padding and layout for responsive view */
-@media (max-width: 1024px) {
-  .fleet-services-main {
-    margin-left: 200px; /* smaller sidebar for tablets */
-    padding: 30px 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .fleet-services-main {
-    margin-left: 0; /* sidebar becomes overlay mode */
-    padding: 20px 10px;
-  }
+.delete:hover {
+  color: #d83b01;
+  transform: scale(1.1);
 }

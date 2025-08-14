@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from './Truckfill.css'; // ✅ Use .module.css for scoped styles
+import styles from './Truckfill.css'; // ✅ Scoped styles
 
 export default function Truckfill({ initialData, onSubmit, onCancel }) {
   const [formData, setFormData] = useState({
@@ -7,10 +7,10 @@ export default function Truckfill({ initialData, onSubmit, onCancel }) {
     product: '',
     quantity: '',
     receivedDate: '',
-    driverName: ''
+    driverName: '',
+    petrolpumpName: ''
   });
 
-  // ✅ Load initialData safely
   useEffect(() => {
     if (initialData) {
       setFormData(initialData);
@@ -37,7 +37,7 @@ export default function Truckfill({ initialData, onSubmit, onCancel }) {
           <input
             type="text"
             name="tankerId"
-            value={formData.tankerId || ''}
+            value={formData.tankerId}
             onChange={handleChange}
             required
           />
@@ -48,7 +48,18 @@ export default function Truckfill({ initialData, onSubmit, onCancel }) {
           <input
             type="text"
             name="product"
-            value={formData.product || ''}
+            value={formData.product}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <label>
+          Petrol Pump Name
+          <input
+            type="text"
+            name="petrolpumpName"
+            value={formData.petrolpumpName}
             onChange={handleChange}
             required
           />
@@ -59,7 +70,7 @@ export default function Truckfill({ initialData, onSubmit, onCancel }) {
           <input
             type="number"
             name="quantity"
-            value={formData.quantity || ''}
+            value={formData.quantity}
             onChange={handleChange}
             required
           />
@@ -70,8 +81,9 @@ export default function Truckfill({ initialData, onSubmit, onCancel }) {
           <input
             type="date"
             name="receivedDate"
-            value={formData.receivedDate || ''}
+            value={formData.receivedDate}
             onChange={handleChange}
+            required
           />
         </label>
 
@@ -80,8 +92,9 @@ export default function Truckfill({ initialData, onSubmit, onCancel }) {
           <input
             type="text"
             name="driverName"
-            value={formData.driverName || ''}
+            value={formData.driverName}
             onChange={handleChange}
+            required
           />
         </label>
 

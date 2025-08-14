@@ -1,61 +1,76 @@
-// src/pages/FleetManagement/CRUD/EditTruck.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './EditTruck.css';
 
-const Edit = ({ truck, onClose, onUpdate }) => {
-  const [formData, setFormData] = useState({ ...truck });
+const EditTruck = ({ initialData, onUpdate, onClose }) => {
+  const [formData, setFormData] = useState({
+    id: '',
+    model: '',
+    location: '',
+    capacity: '',
+    status: 'Active'
+  });
+
+  useEffect(() => {
+    if (initialData) {
+      setFormData(initialData);
+    }
+  }, [initialData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     onUpdate(formData);
-    onClose();
   };
 
   return (
-    <div className="edit-truck-modal">
-      <div className="edit-truck-box">
-        <h2>Edit Truck Details</h2>
+    <form onSubmit={handleSubmit}>
+      <h2>Edit Truck</h2>
 
-        <label>
-          Plate Number:
-          <input name="id" value={formData.id} onChange={handleChange} disabled />
-        </label>
+      <input
+        type="text"
+        name="id"
+        value={formData.id}
+        disabled
+      />
+      <input
+        type="text"
+        name="model"
+        placeholder="Model"
+        value={formData.model}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="text"
+        name="location"
+        placeholder="Location"
+        value={formData.location}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="text"
+        name="capacity"
+        placeholder="Capacity"
+        value={formData.capacity}
+        onChange={handleChange}
+        required
+      />
+      <select name="status" value={formData.status} onChange={handleChange}>
+        <option value="Active">Active</option>
+        <option value="Maintenance">Maintenance</option>
+      </select>
 
-        <label>
-          Model:
-          <input name="model" value={formData.model} onChange={handleChange} />
-        </label>
-
-        <label>
-          Location:
-          <input name="location" value={formData.location} onChange={handleChange} />
-        </label>
-
-        <label>
-          Capacity:
-          <input name="capacity" value={formData.capacity} onChange={handleChange} />
-        </label>
-
-        <label>
-          Status:
-          <select name="status" value={formData.status} onChange={handleChange}>
-            <option value="Active">Active</option>
-            <option value="Inactive">Inactive</option>
-            <option value="Maintenance">Maintenance</option>
-          </select>
-        </label>
-
-        <div className="edit-truck-actions">
-          <button onClick={handleSubmit}>Update</button>
-          <button onClick={onClose}>Cancel</button>
-        </div>
+      <div className="modal-actions">
+        <button type="submit">Update</button>
+        <button type="button" onClick={onClose}>Cancel</button>
       </div>
-    </div>
+    </form>
   );
 };
 
-export default Edit;
+export default EditTruck;
