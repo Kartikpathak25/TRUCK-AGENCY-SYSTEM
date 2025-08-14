@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TRUCK-AGENCY-SYSTEM/static/css/main.a359fe08.css",
+    "main.js": "/TRUCK-AGENCY-SYSTEM/static/js/main.67b35c03.js",
+    "static/js/453.10aecf8e.chunk.js": "/TRUCK-AGENCY-SYSTEM/static/js/453.10aecf8e.chunk.js",
+    "index.html": "/TRUCK-AGENCY-SYSTEM/index.html",
+    "main.a359fe08.css.map": "/TRUCK-AGENCY-SYSTEM/static/css/main.a359fe08.css.map",
+    "main.67b35c03.js.map": "/TRUCK-AGENCY-SYSTEM/static/js/main.67b35c03.js.map",
+    "453.10aecf8e.chunk.js.map": "/TRUCK-AGENCY-SYSTEM/static/js/453.10aecf8e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a359fe08.css",
+    "static/js/main.67b35c03.js"
+  ]
+}
